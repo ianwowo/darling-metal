@@ -25,6 +25,28 @@
 
 #if DARLING_METAL_ENABLED
 
+@synthesize minFilter = _minFilter;
+@synthesize magFilter = _magFilter;
+@synthesize mipFilter = _mipFilter;
+@synthesize maxAnisotropy = _maxAnisotropy;
+@synthesize sAddressMode = _sAddressMode;
+@synthesize tAddressMode = _tAddressMode;
+@synthesize rAddressMode = _rAddressMode;
+@synthesize borderColor = _borderColor;
+@synthesize normalizedCoordinates = _normalizedCoordinates;
+@synthesize lodMinClamp = _lodMinClamp;
+@synthesize lodMaxClamp = _lodMaxClamp;
+@synthesize lodAverage = _lodAverage;
+@synthesize compareFunction = _compareFunction;
+@synthesize supportArgumentBuffers = _supportArgumentBuffers;
+@synthesize label = _label;
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    NSLog(@"STUB: copyWithZone");
+    return 0;
+}
+
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
 {
     return [NSMethodSignature signatureWithObjCTypes: "v@:"];

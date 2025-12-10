@@ -57,6 +57,9 @@ add_framework(Metal
 		src/Metal/MTLTexture.mm
 		src/Metal/MTLTextureDescriptor.mm
 		src/Metal/MTLVertexDescriptor.mm
+        src/Metal/MTLAttributeDescriptor.mm
+        src/Metal/MTLCaptureManager.mm
+        src/Metal/MTLFunctionConstantValues.mm
 
 	DEPENDENCIES
 		system

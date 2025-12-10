@@ -82,6 +82,11 @@ MTLRegion MTLRegionMake3D(NSUInteger x, NSUInteger y, NSUInteger z, NSUInteger w
 	return region;
 };
 
+typedef struct MTLResourceID
+{
+    uint64_t _impl;
+} MTLResourceID; // API_AVAILABLE(macos(13.0), ios(16.0));
+
 METAL_DECLARATIONS_END
 
 #endif // _METAL_MTLTYPES_H_

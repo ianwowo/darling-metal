@@ -49,6 +49,13 @@ typedef NS_OPTIONS(NSUInteger, MTLPipelineOption) {
 typedef NSString* MTLDeviceNotificationName;
 typedef void (^MTLDeviceNotificationHandler)(id<MTLDevice> device, MTLDeviceNotificationName notifyName);
 
+typedef NS_ENUM(NSInteger, MTLSparsePageSize)
+{
+    MTLSparsePageSize16 = 101,
+    MTLSparsePageSize64 = 102,
+    MTLSparsePageSize256 = 103,
+}; // API_AVAILABLE(macos(13.0), ios(16.0));
+
 MTL_EXPORT MTL_EXTERN const MTLDeviceNotificationName MTLDeviceWasAddedNotification;
 MTL_EXPORT MTL_EXTERN const MTLDeviceNotificationName MTLDeviceRemovalRequestedNotification;
 MTL_EXPORT MTL_EXTERN const MTLDeviceNotificationName MTLDeviceWasRemovedNotification;

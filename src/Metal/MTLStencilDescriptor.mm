@@ -25,6 +25,19 @@
 
 #if DARLING_METAL_ENABLED
 
+@synthesize stencilCompareFunction = _stencilCompareFunction;
+@synthesize stencilFailureOperation = _stencilFailureOperation;
+@synthesize depthFailureOperation = _depthFailureOperation;
+@synthesize depthStencilPassOperation = _depthStencilPassOperation;
+@synthesize readMask = _readMask;
+@synthesize writeMask = _writeMask;
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    NSLog(@"STUB: copyWithZone");
+    return 0;
+}
+
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
 {
     return [NSMethodSignature signatureWithObjCTypes: "v@:"];

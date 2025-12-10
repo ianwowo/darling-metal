@@ -25,6 +25,18 @@
 
 #if DARLING_METAL_ENABLED
 
+@synthesize depthCompareFunction = _depthCompareFunction;
+@synthesize depthWriteEnabled = _depthWriteEnabled;
+@synthesize frontFaceStencil = _frontFaceStencil;
+@synthesize backFaceStencil = _backFaceStencil;
+@synthesize label = _label;
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    NSLog(@"STUB: copyWithZone");
+    return 0;
+}
+
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
 {
     return [NSMethodSignature signatureWithObjCTypes: "v@:"];
@@ -34,6 +46,10 @@
 {
     NSLog(@"Stub called: %@ in %@", NSStringFromSelector([anInvocation selector]), [self class]);
 }
+
+#else
+
+MTL_UNSUPPORTED_CLASS
 
 #endif
 

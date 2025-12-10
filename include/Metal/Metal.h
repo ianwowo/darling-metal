@@ -41,6 +41,7 @@
 #import <Metal/MTLStencilDescriptor.h>
 #import <Metal/MTLTexture.h>
 #import <Metal/MTLTextureDescriptor.h>
+#import <Metal/MTLCaptureManager.h>
 #import <Metal/MTLTypes.h>
 #import <Metal/MTLVertexDescriptor.h>
 

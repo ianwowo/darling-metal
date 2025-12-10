@@ -31,6 +31,8 @@ METAL_DECLARATIONS_BEGIN
 @protocol MTLDevice;
 @protocol MTLArgumentEncoder;
 
+@protocol MTLDynamicLibrary;
+
 @class MTLVertexAttribute;
 @class MTLAttribute;
 @class MTLFunctionConstant;

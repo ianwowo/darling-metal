@@ -19,6 +19,7 @@
 
 #import <Metal/MTLLibraryInternal.h>
 #import <Metal/MTLDevice.h>
+#import <Metal/MTLHeap.h>
 #import <Metal/stubs.h>
 
 @implementation MTLFunctionInternal
@@ -157,3 +158,25 @@ MTL_UNSUPPORTED_CLASS
 #endif
 
 @end
+
+// ----------------------------------------------------------------------------
+
+@implementation MTLHeapDescriptor
+
+@synthesize size = _size;
+@synthesize storageMode = _storageMode;
+@synthesize cpuCacheMode = _cpuCacheMode;
+@synthesize sparsePageSize = _sparsePageSize;
+@synthesize hazardTrackingMode = _hazardTrackingMode;
+@synthesize resourceOptions = _resourceOptions;
+@synthesize type = _type;
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    NSLog(@"STUB: copyWithZone");
+    return 0;
+}
+
+@end
+
+// ----------------------------------------------------------------------------

@@ -25,6 +25,26 @@
 
 #if DARLING_METAL_ENABLED
 
+// Pre-processor options
+@synthesize preprocessorMacros = _preprocessorMacros;
+// Math intrinsics options
+@synthesize fastMathEnabled = _fastMathEnabled;
+@synthesize languageVersion = _languageVersion;
+@synthesize libraryType = _libraryType;
+@synthesize installName = _installName;
+@synthesize libraries = _libraries;
+@synthesize preserveInvariance = _preserveInvariance;
+@synthesize optimizationLevel = _optimizationLevel;
+@synthesize compileSymbolVisibility = _compileSymbolVisibility;
+@synthesize allowReferencingUndefinedSymbols = _allowReferencingUndefinedSymbols;
+@synthesize maxTotalThreadsPerThreadgroup = _maxTotalThreadsPerThreadgroup;
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    NSLog(@"STUB: copyWithZone");
+    return 0;
+}
+
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
 {
     return [NSMethodSignature signatureWithObjCTypes: "v@:"];

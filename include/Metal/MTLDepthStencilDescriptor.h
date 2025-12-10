@@ -21,8 +21,18 @@
 #define _METAL_MTLDEPTHSTENCILDESCRIPTOR_H_
 
 #import <Foundation/Foundation.h>
+#import <Metal/MTLDefines.h>
+#import <Metal/MTLStencilDescriptor.h>
 
-@interface MTLDepthStencilDescriptor : NSObject
+MTL_EXPORT //API_AVAILABLE(macos(10.11), ios(8.0))
+@interface MTLDepthStencilDescriptor : NSObject <NSCopying>
+
+@property (nonatomic) MTLCompareFunction depthCompareFunction;
+@property (nonatomic, getter=isDepthWriteEnabled) BOOL depthWriteEnabled;
+@property (copy, nonatomic, null_resettable) MTLStencilDescriptor *frontFaceStencil;
+@property (copy, nonatomic, null_resettable) MTLStencilDescriptor *backFaceStencil;
+@property (nullable, copy, nonatomic) NSString *label;
+
 @end
 
 #endif // _METAL_MTLDEPTHSTENCILDESCRIPTOR_H_

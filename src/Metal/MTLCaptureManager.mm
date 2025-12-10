@@ -20,8 +20,33 @@
 #import <Metal/MTLCaptureManager.h>
 #import <Foundation/NSMethodSignature.h>
 #import <Foundation/NSInvocation.h>
+#import <Metal/stubs.h>
+
+@implementation MTLCaptureDescriptor
+
+@synthesize captureObject = _captureObject;
+@synthesize destination = _destination;
+@synthesize outputURL = _outputURL;
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    NSLog(@"STUB: copyWithZone");
+    return 0;
+}
+
+@end
 
 @implementation MTLCaptureManager
+
+#if DARLING_METAL_ENABLED
+
+@synthesize defaultCaptureScope = _defaultCaptureScope;
+@synthesize isCapturing = _isCapturing;
+
+- (void)stopCapture
+{
+    NSLog(@"STUB: stopCapture");
+}
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
 {
@@ -32,5 +57,11 @@
 {
     NSLog(@"Stub called: %@ in %@", NSStringFromSelector([anInvocation selector]), [self class]);
 }
+
+#else
+
+MTL_UNSUPPORTED_CLASS
+
+#endif
 
 @end

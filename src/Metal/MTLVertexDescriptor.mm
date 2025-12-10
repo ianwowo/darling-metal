@@ -25,6 +25,25 @@
 
 #if DARLING_METAL_ENABLED
 
+@synthesize layouts = _layouts;
+@synthesize attributes = _attributes;
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    NSLog(@"STUB: copyWithZone");
+    return 0;
+}
+
++ (MTLVertexDescriptor *)vertexDescriptor
+{
+    NSLog(@"STUB: vertexDescriptor");
+    return 0;
+}
+
+- (void)reset
+{
+    NSLog(@"STUB: reset");
+}
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
 {
     return [NSMethodSignature signatureWithObjCTypes: "v@:"];
